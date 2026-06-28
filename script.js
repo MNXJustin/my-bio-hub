@@ -1,5 +1,4 @@
-// ---------- Dynamic Typewriter Effect ----------
-const roles = ["Idk what to put here :3", "Building custom stuff...",];
+const roles = ["Idk what to put here :3", "Building custom stuff..."];
 let currentRoleIdx = 0;
 let currentCharIdx = 0;
 let isDeleting = false;
@@ -31,14 +30,11 @@ function type() {
     }
 }
 
-// ---------- Stable Audio Player ----------
 document.addEventListener('DOMContentLoaded', () => {
     type();
 
     const audio = document.getElementById('bg-audio');
     const playBtn = document.getElementById('play-btn');
-    const iconPlay = document.getElementById('icon-play');
-    const iconPause = document.getElementById('icon-pause');
     const playerUI = document.getElementById('audio-player');
 
     if(audio && playBtn) {
@@ -47,24 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 audio.play();
                 playBtn.setAttribute('aria-pressed', 'true');
                 playBtn.setAttribute('aria-label', 'Musik pausieren');
-                iconPlay.hidden = true;
-                iconPause.hidden = false;
                 playerUI.classList.add('is-playing');
             } else {
                 audio.pause();
                 playBtn.setAttribute('aria-pressed', 'false');
                 playBtn.setAttribute('aria-label', 'Musik abspielen');
-                iconPlay.hidden = false;
-                iconPause.hidden = true;
                 playerUI.classList.remove('is-playing');
             }
         });
         
-        // Audio Ende-Event (falls loop nicht greift oder zum Zurücksetzen)
         audio.addEventListener('ended', () => {
             playBtn.setAttribute('aria-pressed', 'false');
-            iconPlay.hidden = false;
-            iconPause.hidden = true;
             playerUI.classList.remove('is-playing');
         });
     }

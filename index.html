@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio Hub | Justin</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Load clean, modern developer font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
@@ -15,23 +14,20 @@
 
     <div class="container">
         <div class="profile-card">
-            <!-- Avatar / Profile Picture -->
+            
             <div class="avatar-container">
                 <div class="avatar-glow"></div>
-                <img src="image_0a7ad6.png" alt="Avatar" class="avatar">
+                <img src="image_0a825d.png" alt="Avatar" class="avatar">
             </div>
 
-            <!-- Username & Badges -->
-            <div class="username-container">
+            <div class="user-header">
                 <h1 class="username">Justin</h1>
                 <div class="badges">
-                    <!-- Owner Badge -->
                     <span class="badge" title="Owner">
                         <svg viewBox="0 0 24 24" fill="#fbbf24" width="18" height="18">
                             <path d="M5 16h14v2H5zm14-9l-3 4-4-5-4 5-3-4v7h14V7z"/>
                         </svg>
                     </span>
-                    <!-- Verified Badge -->
                     <span class="badge" title="Verified">
                         <svg viewBox="0 0 24 24" fill="#3b82f6" width="18" height="18">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -40,10 +36,8 @@
                 </div>
             </div>
 
-            <!-- Typewriter Subtitle -->
             <p class="subtitle"><span id="typing"></span><span class="cursor">|</span></p>
 
-            <!-- Bio Links Section -->
             <div class="links-container">
                 <a href="https://github.com/MNXJustin" target="_blank" rel="noopener" class="bio-link">
                     <span class="icon" aria-hidden="true">
@@ -51,7 +45,6 @@
                     </span>
                     GitHub
                 </a>
-                <!-- Discord link opens profile directly if supported, else redirects -->
                 <a href="https://discord.com/users/justin063646" target="_blank" rel="noopener" class="bio-link">
                     <span class="icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.7A18.3 18.3 0 0 0 15.6 3c-.2.4-.5.9-.6 1.3a16.9 16.9 0 0 0-5 0A11 11 0 0 0 9.4 3a18.3 18.3 0 0 0-4.7 1.7C2 9.3 1.4 13.8 1.7 18.3A18.6 18.6 0 0 0 7.3 21c.4-.6.8-1.3 1.1-2a12 12 0 0 1-1.8-.9l.4-.3c3.5 1.6 7.3 1.6 10.8 0l.4.3c-.6.3-1.2.6-1.8.9.3.7.7 1.4 1.1 2a18.6 18.6 0 0 0 5.6-2.7c.4-5.2-.7-9.6-2.8-13.6ZM8.8 15.6c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2Zm6.4 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2Z"/></svg>
@@ -60,10 +53,8 @@
                 </a>
             </div>
 
-            <!-- Stable Background-music player -->
             <div class="audio-player" id="audio-player">
                 <div class="track-info">
-                    <!-- Trage hier den Namen deines Songs ein -->
                     <span class="track-name">Dein Song</span>
                     <span class="track-artist">Dein Artist</span>
                 </div>
@@ -73,12 +64,11 @@
                     </div>
                     <button id="play-btn" aria-label="Musik abspielen" aria-pressed="false">
                         <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+                        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- FÜGE HIER DEINE MUSIKDATEI EIN -->
             <audio id="bg-audio" loop>
                 <source src="music.mp3" type="audio/mpeg">
             </audio>

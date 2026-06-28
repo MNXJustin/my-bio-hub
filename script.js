@@ -33,7 +33,7 @@ function startTypingEffect() {
             typingElement.textContent = currentRole.substring(0, charIndex);
         }
 
-        // Show cursor during typing/deleting, hide during pauses
+        // Show cursor while typing/deleting
         if (cursorElement) {
             cursorElement.classList.remove('hidden');
         }
@@ -41,7 +41,7 @@ function startTypingEffect() {
         let delay = isDeleting ? typingConfig.deletingSpeed : typingConfig.typingSpeed;
 
         if (!isDeleting && charIndex === currentRole.length) {
-            // Finished typing - hide cursor during pause
+            // Finished typing – hide cursor during pause
             if (cursorElement) {
                 cursorElement.classList.add('hidden');
             }
@@ -63,23 +63,13 @@ const trackVideoId = 'VOn6i2spFIY';
 let ytPlayer = null;
 let soundUnlocked = false;
 
-function announceToScreenReader(message) {
-    const announcer = document.getElementById('announcer');
-    if (announcer) {
-        announcer.textContent = message;
-    }
-}
-
 function updatePlayerUI(isAudible) {
     const playBtn = document.getElementById('play-btn');
     const playerUI = document.getElementById('audio-player');
     if (!playBtn || !playerUI) return;
-    
     playBtn.setAttribute('aria-pressed', String(isAudible));
     playBtn.setAttribute('aria-label', isAudible ? 'Musik pausieren' : 'Musik abspielen');
     playerUI.classList.toggle('is-playing', isAudible);
-    
-    announceToScreenReader(isAudible ? 'Musik wird abgespielt' : 'Musik pausiert');
 }
 
 window.onYouTubeIframeAPIReady = function () {
@@ -130,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAudioControls();
 });
 
-// Cleanup on page unload
+// Cleanup timeout on page unload
 window.addEventListener('beforeunload', () => {
     if (typingTimeout) {
         clearTimeout(typingTimeout);

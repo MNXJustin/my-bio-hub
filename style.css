@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #050608;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(15, 23, 42, 0.4) 0%, rgba(5, 6, 8, 1) 100%);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.profile-card {
+    background: rgba(10, 11, 16, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avatar-container {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px auto;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.avatar-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3b82f6;
+    filter: blur(15px);
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.user-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.username {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #f3f4f6;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.15);
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 28px;
+    height: 16px;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.cursor {
+    animation: blink 0.8s infinite;
+    color: #3b82f6;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.bio-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 14px;
+    border-radius: 12px;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.bio-link .icon {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+}
+
+.bio-link .icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bio-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bio-link:focus-visible,
+#play-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.audio-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.audio-player.is-playing {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: rgba(59, 130, 246, 0.04);
+}
+
+.track-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.track-name {
+    font-size: 11px;
+    color: #e5e7eb;
+    font-weight: 700;
+}
+
+.track-artist {
+    font-size: 10px;
+    color: #4b5563;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 14px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.audio-player.is-playing .equalizer {
+    opacity: 1;
+}
+
+.equalizer span {
+    width: 2px;
+    background: #3b82f6;
+    border-radius: 1px;
+    height: 30%;
+    animation: none;
+}
+
+.audio-player.is-playing .equalizer span {
+    animation: eq 0.9s ease-in-out infinite;
+}
+
+.equalizer span:nth-child(1) { animation-delay: 0s; }
+.equalizer span:nth-child(2) { animation-delay: 0.15s; }
+.equalizer span:nth-child(3) { animation-delay: 0.3s; }
+.equalizer span:nth-child(4) { animation-delay: 0.45s; }
+
+#play-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: color 0.2s, transform 0.2s;
+    padding: 2px;
+}
+
+#play-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+#icon-pause {
+    display: none;
+}
+
+.audio-player.is-playing #icon-play {
+    display: none;
+}
+
+.audio-player.is-playing #icon-pause {
+    display: block;
+}
+
+#play-btn:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.audio-player.is-playing #play-btn {
+    color: #3b82f6;
+}
+
+.yt-player-hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes eq {
+    0%, 100% { height: 30%; }
+    50% { height: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .audio-player.is-playing .equalizer span {
+        animation: none;
+        height: 70%;
+    }
+    .profile-card {
+        animation: none;
+    }
+}

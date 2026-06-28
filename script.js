@@ -1,8 +1,8 @@
 const typingConfig = {
     roles: [
-        "Full-stack developer",
+        "Idk :3",
         "Building random stuff",
-        "Learning web dev one project at a time",
+        "Roblox Developer",
         "Femboy BTW ✨"
     ],
     typingSpeed: 80,

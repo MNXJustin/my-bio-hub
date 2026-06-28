@@ -15,7 +15,6 @@ body {
     overflow: hidden;
 }
 
-/* Dynamic radial gradient dark background overlay */
 .background-overlay {
     position: absolute;
     top: 0;
@@ -34,7 +33,6 @@ body {
     padding: 20px;
 }
 
-/* Glassmorphism Profile Card */
 .profile-card {
     background: rgba(10, 11, 16, 0.7);
     backdrop-filter: blur(12px);
@@ -62,6 +60,8 @@ body {
     object-fit: cover;
     position: relative;
     z-index: 2;
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .avatar-glow {
@@ -77,11 +77,10 @@ body {
     z-index: 1;
 }
 
-/* Username & Badges Styles */
-.username-container {
+.user-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     margin-bottom: 6px;
 }
@@ -92,12 +91,13 @@ body {
     letter-spacing: -0.5px;
     color: #f3f4f6;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    margin: 0;
 }
 
 .badges {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 .badge {
@@ -118,6 +118,7 @@ body {
     margin-bottom: 28px;
     height: 16px;
     font-weight: 300;
+    margin-top: 8px;
 }
 
 .cursor {
@@ -132,7 +133,6 @@ body {
     margin-bottom: 28px;
 }
 
-/* Sleek link entries */
 .bio-link {
     display: flex;
     align-items: center;
@@ -174,7 +174,6 @@ body {
     outline-offset: 2px;
 }
 
-/* Aesthetic Audio Player Component */
 .audio-player {
     display: flex;
     justify-content: space-between;
@@ -215,7 +214,6 @@ body {
     gap: 10px;
 }
 
-/* Tiny equalizer, only animates while a track is actually playing */
 .equalizer {
     display: flex;
     align-items: flex-end;
@@ -251,18 +249,30 @@ body {
     border: none;
     color: #9ca3af;
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     transition: color 0.2s, transform 0.2s;
-    padding: 4px;
+    padding: 2px;
 }
 
 #play-btn svg {
     width: 100%;
     height: 100%;
+}
+
+#icon-pause {
+    display: none;
+}
+
+.audio-player.is-playing #icon-play {
+    display: none;
+}
+
+.audio-player.is-playing #icon-pause {
+    display: block;
 }
 
 #play-btn:hover {
@@ -274,7 +284,6 @@ body {
     color: #3b82f6;
 }
 
-/* Keyframe Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }

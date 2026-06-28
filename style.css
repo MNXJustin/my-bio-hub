@@ -77,13 +77,39 @@ body {
     z-index: 1;
 }
 
+/* Username & Badges Styles */
+.username-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
 .username {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 6px;
     color: #f3f4f6;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.15);
 }
 
 .subtitle {
@@ -106,7 +132,7 @@ body {
     margin-bottom: 28px;
 }
 
-/* Guns.lol sleek link entries */
+/* Sleek link entries */
 .bio-link {
     display: flex;
     align-items: center;
@@ -246,18 +272,6 @@ body {
 
 .audio-player.is-playing #play-btn {
     color: #3b82f6;
-}
-
-/* The YouTube player only exists to provide audio, it is never meant to be seen */
-.yt-player-hidden {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
 }
 
 /* Keyframe Animations */

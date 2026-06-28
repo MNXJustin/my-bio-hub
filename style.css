@@ -123,12 +123,29 @@ body {
     transition: all 0.2s ease;
 }
 
+.bio-link .icon {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+}
+
+.bio-link .icon svg {
+    width: 100%;
+    height: 100%;
+}
+
 .bio-link:hover {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bio-link:focus-visible,
+#play-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
 }
 
 /* Aesthetic Audio Player Component */
@@ -140,6 +157,12 @@ body {
     border: 1px dashed rgba(255, 255, 255, 0.08);
     padding: 12px 16px;
     border-radius: 12px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.audio-player.is-playing {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: rgba(59, 130, 246, 0.04);
 }
 
 .track-info {
@@ -160,19 +183,81 @@ body {
     color: #4b5563;
 }
 
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tiny equalizer, only animates while a track is actually playing */
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 14px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.audio-player.is-playing .equalizer {
+    opacity: 1;
+}
+
+.equalizer span {
+    width: 2px;
+    background: #3b82f6;
+    border-radius: 1px;
+    height: 30%;
+    animation: none;
+}
+
+.audio-player.is-playing .equalizer span {
+    animation: eq 0.9s ease-in-out infinite;
+}
+
+.equalizer span:nth-child(1) { animation-delay: 0s; }
+.equalizer span:nth-child(2) { animation-delay: 0.15s; }
+.equalizer span:nth-child(3) { animation-delay: 0.3s; }
+.equalizer span:nth-child(4) { animation-delay: 0.45s; }
+
 #play-btn {
     background: none;
     border: none;
     color: #9ca3af;
     cursor: pointer;
-    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
     transition: color 0.2s, transform 0.2s;
     padding: 4px;
+}
+
+#play-btn svg {
+    width: 100%;
+    height: 100%;
 }
 
 #play-btn:hover {
     color: #ffffff;
     transform: scale(1.1);
+}
+
+.audio-player.is-playing #play-btn {
+    color: #3b82f6;
+}
+
+/* The YouTube player only exists to provide audio, it is never meant to be seen */
+.yt-player-hidden {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 /* Keyframe Animations */
@@ -184,4 +269,19 @@ body {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+@keyframes eq {
+    0%, 100% { height: 30%; }
+    50% { height: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .audio-player.is-playing .equalizer span {
+        animation: none;
+        height: 70%;
+    }
+    .profile-card {
+        animation: none;
+    }
 }

@@ -182,8 +182,11 @@ body {
 
 .badges {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: var(--spacing-xs);
+    margin-bottom: 2px;
 }
 
 .badge {
@@ -260,7 +263,6 @@ body {
     overflow: hidden;
 }
 
-/* Gradient overlay that appears on hover */
 .bio-link::before {
     content: '';
     position: absolute;
@@ -307,7 +309,6 @@ body {
     color: var(--accent-violet);
 }
 
-/* Active/pressed state */
 .bio-link:active {
     transform: translateY(-1px);
     transition: all 0.1s ease;
@@ -443,7 +444,6 @@ body {
     pointer-events: none;
 }
 
-/* Accessibility - visually hidden but available to screen readers */
 .visually-hidden {
     position: absolute;
     width: 1px;

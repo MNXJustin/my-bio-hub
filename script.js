@@ -1,13 +1,21 @@
 const typingConfig = {
-    roles: ["Idk what to put here :3", "Building custom stuff..."],
-    typingSpeed: 100,
-    deletingSpeed: 50,
-    pauseDelay: 2000,
-    nextRoleDelay: 500
+    roles: [
+        "Full-stack developer",
+        "Building random stuff",
+        "Learning web dev one project at a time",
+        "Femboy BTW ✨"
+    ],
+    typingSpeed: 80,
+    deletingSpeed: 40,
+    pauseDelay: 2500,
+    nextRoleDelay: 400
 };
+
+let typingTimeout = null;
 
 function startTypingEffect() {
     const typingElement = document.getElementById('typing');
+    const cursorElement = document.getElementById('cursor');
     if (!typingElement) return;
 
     let roleIndex = 0;
@@ -16,12 +24,27 @@ function startTypingEffect() {
 
     function tick() {
         const currentRole = typingConfig.roles[roleIndex];
-        charIndex += isDeleting ? -1 : 1;
-        typingElement.textContent = currentRole.substring(0, charIndex);
+        
+        if (!isDeleting) {
+            charIndex++;
+            typingElement.textContent = currentRole.substring(0, charIndex);
+        } else {
+            charIndex--;
+            typingElement.textContent = currentRole.substring(0, charIndex);
+        }
+
+        // Show cursor during typing/deleting, hide during pauses
+        if (cursorElement) {
+            cursorElement.classList.remove('hidden');
+        }
 
         let delay = isDeleting ? typingConfig.deletingSpeed : typingConfig.typingSpeed;
 
         if (!isDeleting && charIndex === currentRole.length) {
+            // Finished typing - hide cursor during pause
+            if (cursorElement) {
+                cursorElement.classList.add('hidden');
+            }
             isDeleting = true;
             delay = typingConfig.pauseDelay;
         } else if (isDeleting && charIndex === 0) {
@@ -30,7 +53,7 @@ function startTypingEffect() {
             delay = typingConfig.nextRoleDelay;
         }
 
-        setTimeout(tick, delay);
+        typingTimeout = setTimeout(tick, delay);
     }
 
     tick();
@@ -40,13 +63,23 @@ const trackVideoId = 'VOn6i2spFIY';
 let ytPlayer = null;
 let soundUnlocked = false;
 
+function announceToScreenReader(message) {
+    const announcer = document.getElementById('announcer');
+    if (announcer) {
+        announcer.textContent = message;
+    }
+}
+
 function updatePlayerUI(isAudible) {
     const playBtn = document.getElementById('play-btn');
     const playerUI = document.getElementById('audio-player');
     if (!playBtn || !playerUI) return;
+    
     playBtn.setAttribute('aria-pressed', String(isAudible));
     playBtn.setAttribute('aria-label', isAudible ? 'Musik pausieren' : 'Musik abspielen');
     playerUI.classList.toggle('is-playing', isAudible);
+    
+    announceToScreenReader(isAudible ? 'Musik wird abgespielt' : 'Musik pausiert');
 }
 
 window.onYouTubeIframeAPIReady = function () {
@@ -95,4 +128,11 @@ function setupAudioControls() {
 document.addEventListener('DOMContentLoaded', () => {
     startTypingEffect();
     setupAudioControls();
+});
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    if (typingTimeout) {
+        clearTimeout(typingTimeout);
+    }
 });

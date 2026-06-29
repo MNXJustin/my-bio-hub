@@ -2,8 +2,7 @@ const typingConfig = {
     roles: [
         "Idk :3",
         "Building random stuff",
-        "Roblox Developer",
-        "Femboy BTW ✨"
+        "Roblox Developer"
     ],
     typingSpeed: 80,
     deletingSpeed: 40,

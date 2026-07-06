@@ -1,17 +1,139 @@
-// Obfuscated with JSE Private Infrastructure
-let mQOGynRn = 397;
-let OEnpHQrX = 703;
-let lNBdxEMI = 991;
-let NgmKTMid = 473;
-let xIzapUsk = 755;
-const _k = "EngineCore_X90_Alpha";
-const _h = "26020b1d1e4a3d1d0a153b4a866c3f3615285a6f792a8360665e7d383926584a2331266e70756e688d7771747859553382909ead496fb5988489827ca18b836a5b4d714e5f507ebf939a7b704f6a9661816c5362a09e9fa6aa9ed9d3756dddc29e806c708e7bad94737c906e8982a8998babf1d4c0c5abc4c7c7c1c4ca8eb89e9b8cba8ecddac0acded9dadcf5f1d5d8ded6b99db295c1c8eff0a6cca5b2aafa05fbf9e808ea09f6fabee8d8f602c9d3b0c2c30e191108101602030a0e023df51c09edd6c7e1d3ece8cbd0db2012452e1240f4360731100c24ddebec08ddde1ce7e908e3ebf6654c01471418ec3850f620f1f610fbff2346f90a382549612430051f1127270d08112256745a157c8d8729214e41161832584930311b1c1f242237295c59713588883048353f5438374c7033584e6b3e706c9497653e51764a88a25b605c4b506a8fa3a79fc3655dcd71536f6d68b962687275638b857a5d909cb7a5e1dfb0796d69986c6c7286b892797691a5b0c8caa7aca6829b80e9c6829b9c97aea0d9d1ead9a19909ec91a3d6d8f4abb0ac9ba0bac1b699ccd8f3e11400beb6beb7dba5020af6ee0dfacaadd927fb10e5d7d9d3c2bbf50714041a1b070e120641f7200945e9ccdae4f3f7d7d0e01e2935321d44554ff1e90dfff42ddff1e1ecedeffef113ef3a41692944491a13476b3a345943f713f8ff310119087d2b5054366c495519726d5751545a52715e211b433e6125524b361b272a4d5926242b66a0722a4155587f8046592e432f359b4d3a383f4b4e545542744c93917878718ca4aea9938d90968ead9a6750cdbf68aa7e585d71636c84595a9baa7ba7aeb2a6e1db7d75e5c8b4b9b26d997c838f7072988acdc3dac99189f9dcc8cdc6c0e5cfc9cc9ea1b98da48ba4bfe8eac8bea8efae97d1afba9d98aac09ca2e20017fae6cfd6adc3c2dad2abacf2c9bdcfcbb6c8e8e912cd252404ccbabbf3e4c7cccbde2c173c0a453fe1d9492c18da16d3f9eed41ce94439262a1e5953f5ed5d402c31edec080114eef2e9252d4b4b43670901715440453e385d4741181312280015213540585a373c4a0d17243d3a16162a113f2e666d9552645b473f1e21582d492c6b3d3f2c564228355b6a3d2da1903f493b46403539434e85b2a08e82bdb75951c1a455bf8e88ad9791949a92ba8fa287898aa265928b765c616ec1766d5f6261c57e6f7a9c9dc688a58f6c828a779b7adfbcc2bad9c6cabef9acdb8df5a199839d91bbb091938b89b7a6e7d2b2e1a9a111f4e0e5ded8fde7e1e4a9adcfbbbdb8bcd70002e0d6c007b5b8d0cac2d4b7c7e9f4b4b5e8ee070e3121c0d6cac4e0c10203193429161a0e4943e5ddf01a1c211a1439231d20dad9112af2dd111820f14444e9e812eb11f4fdebecef513f4202181b44532ef9fb1708031e3d010b020139092007122f645e456c625d2a2745181b21411f4320331b8b475c5d544e2b443a27442f828a766e8d7a7e72ada78087b19c814e515c583b3c584348628e9484c17e9596734f4a5d5764b1a0a8a39e57887054558783c3b88d7f9e796b6e827b71a3b283afb6baaee9e3857dedd0bcc1bac1dec397777885aa82937efdabc0c1b8b28fd501c8b5908d97da93c4ac919bbf0bf1dac3bf9ab0e2acc0b8b2ab04e605f2f6ea251fc1b9290cf8c6bcf01dbec4ced1bfe7e1d6b9ecf813013420d73b0a0429130d10160e2d1a1e124d47e9e10e07f2d8ddead8dbdcdfe7e81520f1ea200e2e611c190047f3f00d332ef0f7f219fd10376c5a2b09795c484d4640654f494c521d4f565a4e8983251d8d705c615a1b4a3f181c232a441c316280976d634c477b9f6e688d7771747a72917e82766d7089865c98898956537144474d6d4b6f4c5f47b76fa08e766f7462524f8ca6bf9ca29ab9a6aa9ed98075b2919169b1636ac9ab74819269997572799fae8987ebd4838d7f8a84797d8792c2fcd1cfc6f1f49dd0dbe8d4d9d2ccf1dbd5d8ded6f59995b6d0cbf4ddd0caa7edf3e0c3b0adbdaf03eff6faee2923c5bd2d10fc01fac6deb7b8d7b8bae0d20e153d2f0b20f5e7e9e3d2cb051716142b19311922e2f8fb24330ed9dbf7e8e3fe1df3e5e2e1122402e5172635414e36383d3630553f393c423a59460ef92d343c0d6060180a1a0b2f0e2a0d080c34136818482f5d7342401d4923243c30767e6a62816e7266a19b685fa5887479726c917b413f4e3d5f3b5a4168748e7e659c8d8d5943717b50474f4f7c62a25a80869e69cd74596d5b6bc0aac3a0a69ebd6dd4a2ddd779a598856bbda7c1b77cd7756d789e8ac2829facced07f9f808e81a39dcbd8c8c9b48e84c891f3b2d1ffa0a3d7d8f09cb0abd9a3aecac5a5a399c713a0adcfd3a0bdf50ecdb0b9f0c5b3e0acc2dddfe30604e6d7bc050bf8dbc8c5d5c71b07c8c7ccfeef1424f728e1c9d6cbfdd805d4dfedf8f0fb014d08224a0400e1efe2e34c2ffe46322a4936f9f31b1639fd1d1cfdfa1c081f43504002031a151bfd2f2b17583c382d21131328091d36233935566526454c5432534c1a705b756b6b65686e274e242536a54f7d7a504f4a524f70a87f353941456441544aab7a9881586c495e4f52757164675296ae59534e848664918573696a709dc4aec7a4aaa2c16574a6d9dcadc1a49f966d70aca57fb5b78e7a94898b8c80888889a79f9482988efee5c9ccd2cab98a9ba5a7b7e3abbab3a8c2aea8cb9c9bb3b29905e3afb4d4d8b4e1cfc7c3a8b3ac0aebf1e5c6c4d8b0c5fee8de2cfaf1dfc6d5c70328122b080e0625e2e2c9ece115273bfdd5d1f7e401ede0deefe6fc1e2ddd070c34fa11ffeef6e6294d33f40117f911f1fcf62867f6016aff0df8f7015d1700171909241c170c7a7b07157e13210c0b15711c13292e1d38162b208e881a53997c686d362c4438243e5f519333462d5656a1865a64723539395637387881456a7d3e467c60909f7aa9849547594c644d4b5856749599c074a5a2ae877c5b60a0698794667b9a71836d9f6893a0bcbe887c918f7b6f9188b9c7c278ac78898ab0b2d38df5e7cc8ce4c4e9d3cd97a2beb999978dbb0794a1c3b7afe5c7cc03d7a5a3b39dcfe6f5bdcd18ed01e4dfb1abf9f811c21bf8fef6150206fa35e5080df4e9e1d11000f1ddc8cdc9f8f0d2dfd3e007e1074d301c211a143923eddce7f500f800e10b0ae3f1062e30352e284d3731343a32513e03011d2a3d51342f4e4953484b4b45484e466552564a857f216634401557565f7975595c625a79666a5e9993352d5a4d22253c314d4283708672737a7e72ada74941b19480857e44623a518e8a91ada49286c1bb5d55c5a89499928c814f545f525d826e9c9a8181b0ac8e7261716b6d6c6bcfacb2aac9b6baaee99081a7edd0bcc1bab4d9c378968384b197c4c2a2d1999101e4d0d5cec8edd7d1d48d989f99a392b8f5adeabfbb9a9de2f717eba0beabacd9e4aaa9d3e604ed1bdcacbebfe6dcbbb4b9fa01251c0afe3933d5cd3d200c110a04eec5fae4d7daf0f7e6d1ff0e2cdb51f7eeeadcec3d2c3324f14c412e3226615bfdf565483439322c513bf2f5f0072942070531285355345c4d4d190d3001053f040e3213210945832b238d332a2618287f1f1c34275e986d6b62242b37815543393a405959383d376c623d5d5b5d4352366fb5988489827ca18b85888e86a592968a706fa59a756f88695767706d84739a598c6273608d986c68b3c0acb1aaa4c9b3adb0b6aecd7de4b2ede78981f1d4c082d8b8ddc7c18fc3dbc791c9f0bbb0dbd8b1af8ba7d29daca7a0a8bfa1b999b1bbc6cde5dbcac8bbf5dfe0de05e9ecf2eac6a7c4bfd523f509ece7deb5b8f42c03b9bdc5c9e8c5d8ce2ffe1c05dcf0cde2d3d6f9f5e8ebd61a32eeeed5f8482f19073d1d243c1c412b25dfe8264d31e6ee2408632d1b5338effb04200dfb45583a59464a0e2d343c6f292e42120e08041d080e22323427120d3f4c5b298a35142e21217a5b615c63629c70723f779b3d35a588747972334f7b7d7747424536475170614849675f5442584ebea5898c928aa9969a8e80896565cc81535658586455615d65678066b7a282b17971e1c4b0b5aea8cdb7b1b48977a47086a1a3a7cac8aa9b80c9cfbcad99908bd5f0e5d2d6ca05ffa19909ecd8dd9fa4a59398a39fac03b1b4c1c4c7f8b5141906f1eae409f3edf0f6ee0dfafec9d9b70502d8d7d213cec4dcd0ebbbc6bdea061b1f173bddd545281419120c311b15ebeed2f4eeeb0a0910182e07ef0135faf210ec3035482a49363a2e696305fd6d503cf3ff082411ff495c3e5d4a4e427d77194e576450554e486d57510b145279251646454c546a4386232e364c452c3c2b3c5759312a259d9841368ca778566a7e453338433f4c46524b4a74b1a5b95c57657f718ba95ab390968ead9a9e92cdc76961d18b6c755a5794646fa27a61947b7794989fc0c4ddcfbfe3b2acd1bbb5b8beb6b0c28b7ea2b491c4cfdcc8cdc6c0e5cfc9ccd2cae99d8ebebdc4cce2bbfeacad9baba79c99a399e604ef14e21d17b9b12104f0b208e80df7f1bff30bf7c128fb222b1efaf3ecb8ce020dbd0bd1bfc2d225c3e00af1f724d906ebeae116cf061fe5d4df1af6f1d8ef0a05f53a0e16e9e42af117f0fb30effa575049376dfa424a2124fd093efb231308160706384e140b2f7b516430290c590b1a412821581f1c3962281f438f615b5442251f396b572c253f31254d694733555c828b9f7a3a363835653c3e3e864f605643525a788b954d6b4449868fad5eb7949a92b15b6d5c7e7f6dab8377596ea2b7c16766697b6988646ab09494c4ab907d75897b71a17287b4bdc09685787aecb9c7ceb0a3cbdad5eee9d3cdd08f8cedd2df90bbc8e4e608f4b2aab2abcf99f6feeae201eeb1abd3cef1b5d5dab1bfb7bee2e9b0bccbb7d8bef3bfe1e80e17393708c4bfcee1c2d20ac7c9fdd3e2f104071c1e453514d1ecd7f7e0ebf11bf000e6e3e3181bf43e1218e904ec424d05ecf807f31435453d63284c39322001fc4d66614b45480704654a061c4045644b361e15212b11301b3c192e214218735e475869624b4e779b846489736d3129345a467e356c4f9d8a65685c4a4578b0878b8da0aca18e92867b709b98716f4b679254704d51545b867e5970669081ccb8837fa0727c638b7bb0ac79d4c9b6baaee9e3857daa9d72748eb4ab807a94c6d1dd847c81b0bc97d8bcb8b2a4a396a9909399b996b899aca29fd0eed90dffef13e2dc01ebe5e8eee6c2a3c0bbd11ff3feddcbc4c6ccb3cdff0cfcfab5ebc1d4ca2bf61116f8eed8e90a0f29e1c8d1e214f9d5e0de4447e6e1fff7e3d91ced04e3eddc314c412e3226615bfdf52215eaec062c23f8f9f70afd27fd1f3a586f094e231ffe0144012908040a1e4169495a204446592b393d2c6a5a617931182132644525371f554b225ba18470756e688d772e312c43657e303b5d6c818a3c9889897a4e5c3f445c4754687a968dc5af5f4ec0ac929d534f8d8b60586e767c5faaa8d9c55e97ddc0acb1aaa4c9b36a6d687fa1ba6c7799a8bdc679d4c5c5b6c8e3d4c1bfca94a4829392b8b1e0eefce8ced98f8bc9c79c94aab2b89be6e415019ad319fce8ede6e005efa3beb3adcce8a9bad0df08cbd9e2bdcfcdbaded1c0000bfeddd8d9cefceb1c293928dbc7cddcece3ccfcdfcef4d72b16ff0a212601fb0d3126f513def1e7fae1fcf5fae51e5841f43f4c383d360b3f55393c423a1b1114ff252c525b7d3209040f18150c11244e556d1f84528d8729219174602b30174024633536394d297c324f5c7b685f5546467287917643354a35693d5e82a5739490b09c5a5c5a3f714c8084a2466c4fa38bae9d655dcdb061cbb494b9a39d66745d8865b861999bdca79c927ca167799974737788bad28e8d7da39fd0b7a8a5928ec9c8e1888f8b8092e5d5d0caaad9a19909ecd8ddd6d0bc99d9d49fa8bc989ee4c9d2ecfbc9c3bec5b3b4c4f300fbfbee0ec6c9bdeadfceca31e6bdb9d3cae30e27040a02210e120641f31c2301f4d1e9d1d3f7e7d0eaf3db07dd2ed5ff142f1d5055422d262045f43035482a49363aec172440425f0ff8051f0a14f5091cff0f310518fd2b6f1e41322b0609131a3114102a174f7d5e10113e5061794c4430726d86548121252d31502d40369760857d4462354b4a5c5c4e453f3435677e8d5a4a50b69c6f74495f5e706e544953528bb99aa699cdb45761769ea0a59e988e736076768e987e7b6c9a80c3bba08980c1abc5bbbbb5b8be87988e7b8a94a4d5d2aa7d7f9b9a92aa8396c4cbe3cfd6dace09b6e8d1b8c0bfa2ac98a59ca1b4dee51200abe902f1b6c021a5a4baafb6d8c7f1c8b3b5d4afb7c231ea0bc5e5d7c3ce02cfe7bfc6c7ca30f6c9e0c6f6f6df1a05f0f5d3dbde01f3e0edeed503e1d826521538330e12e9e6e8f00ef4e9352a2e55313e454f67322b71544045f7fe5d3f0d0b1a092b07260d34405a4a316f54146c4c715b55585e56751f3215544185724c3f1f223a685138392324273d2d47295a587946927a7c817a746c9950778d";
-let _d = "";
-for(let i=0; i<_h.length; i+=2) {
-    let idx = i / 2;
-    let val = parseInt(_h.substring(i, i+2), 16);
-    let byte = (val - idx) % 256;
-    if(byte < 0) byte += 256;
-    _d += String.fromCharCode(byte ^ _k.charCodeAt(idx % _k.length));
+const typingConfig = {
+    roles: [
+        "Idk :3",
+        "Building random stuff",
+        "Roblox Developer"
+    ],
+    typingSpeed: 80,
+    deletingSpeed: 40,
+    pauseDelay: 2500,
+    nextRoleDelay: 400
+};
+let typingTimeout = null;
+function startTypingEffect() {
+    const typingElement = document.getElementById('typing');
+    const cursorElement = document.getElementById('cursor');
+    if (!typingElement) return;
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    function tick() {
+        const currentRole = typingConfig.roles[roleIndex];
+
+        if (!isDeleting) {
+            charIndex++;
+            typingElement.textContent = currentRole.substring(0, charIndex);
+        } else {
+            charIndex--;
+            typingElement.textContent = currentRole.substring(0, charIndex);
+        }
+        // Show cursor while typing/deleting
+        if (cursorElement) {
+            cursorElement.classList.remove('hidden');
+        }
+        let delay = isDeleting ? typingConfig.deletingSpeed : typingConfig.typingSpeed;
+        if (!isDeleting && charIndex === currentRole.length) {
+            // Finished typing – hide cursor during pause
+            if (cursorElement) {
+                cursorElement.classList.add('hidden');
+            }
+            isDeleting = true;
+            delay = typingConfig.pauseDelay;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % typingConfig.roles.length;
+            delay = typingConfig.nextRoleDelay;
+        }
+        typingTimeout = setTimeout(tick, delay);
+    }
+    tick();
 }
-eval(_d);
+const trackVideoId = 'VOn6i2spFIY';
+let ytPlayer = null;
+let soundUnlocked = false;
+function updatePlayerUI(isAudible) {
+    const playBtn = document.getElementById('play-btn');
+    const playerUI = document.getElementById('audio-player');
+    if (!playBtn || !playerUI) return;
+    playBtn.setAttribute('aria-pressed', String(isAudible));
+    playBtn.setAttribute('aria-label', isAudible ? 'Musik pausieren' : 'Musik abspielen');
+    playerUI.classList.toggle('is-playing', isAudible);
+}
+window.onYouTubeIframeAPIReady = function () {
+    ytPlayer = new YT.Player('yt-player', {
+        videoId: trackVideoId,
+        playerVars: {
+            autoplay: 1,
+            mute: 1,
+            controls: 0,
+            loop: 1,
+            playlist: trackVideoId
+        },
+        events: {
+            onReady: event => event.target.playVideo(),
+            onStateChange: event => {
+                const audible = soundUnlocked && event.data === YT.PlayerState.PLAYING;
+                updatePlayerUI(audible);
+            }
+        }
+    });
+};
+function setupAudioControls() {
+    const playBtn = document.getElementById('play-btn');
+    if (!playBtn) return;
+    playBtn.addEventListener('click', () => {
+        if (!ytPlayer) return;
+        if (!soundUnlocked) {
+            soundUnlocked = true;
+            ytPlayer.unMute();
+            ytPlayer.playVideo();
+            updatePlayerUI(true);
+            return;
+        }
+        if (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
+            ytPlayer.pauseVideo();
+        } else {
+            ytPlayer.playVideo();
+        }
+    });
+}
+// Subtle 3D tilt on the card as the cursor moves over it.
+// Skipped entirely for touch input and for prefers-reduced-motion.
+function setupCardTilt() {
+    const frame = document.querySelector('.card-frame');
+    if (!frame) return;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const maxTiltDeg = 6;
+
+    function handlePointerMove(event) {
+        const rect = frame.getBoundingClientRect();
+        const relativeX = (event.clientX - rect.left) / rect.width;
+        const relativeY = (event.clientY - rect.top) / rect.height;
+        const rotateY = (relativeX - 0.5) * maxTiltDeg * 2;
+        const rotateX = (0.5 - relativeY) * maxTiltDeg * 2;
+        frame.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    }
+
+    function resetTilt() {
+        frame.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    }
+
+    frame.addEventListener('pointermove', event => {
+        if (event.pointerType === 'touch') return;
+        handlePointerMove(event);
+    });
+    frame.addEventListener('pointerleave', resetTilt);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    startTypingEffect();
+    setupAudioControls();
+    setupCardTilt();
+});
+// Cleanup timeout on page unload
+window.addEventListener('beforeunload', () => {
+    if (typingTimeout) {
+        clearTimeout(typingTimeout);
+    }
+});

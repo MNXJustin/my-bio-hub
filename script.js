@@ -1,6 +1,6 @@
 const typingConfig = {
     roles: [
-        "Idk :3",
+        "Idk",
         "Building random stuff",
         "Roblox Developer"
     ],
